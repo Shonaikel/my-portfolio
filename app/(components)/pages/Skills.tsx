@@ -14,7 +14,7 @@ const skills=[
 
 export default function SkillsBar() {
     return (
-      <section className="w-full bg-[#2a2a2e] py-8">
+      <section className="w-full  py-8">
         <div className="flex flex-wrap justify-center gap-8 text-sm">
 
           {skills.map((skill) => (

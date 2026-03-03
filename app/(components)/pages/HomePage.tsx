@@ -60,10 +60,14 @@ function Hero() {
         </p>
 
         <div className="flex gap-4">
-          <Button href="/cv.pdf" variant="primary" rounded="base">
+          <Button 
+          href="/assets/Luis_Quesada_CV_FullStack_Developer.pdf" 
+          download="Luis_Quesada_CV_FullStack_Developer.pdf" 
+          variant="primary" 
+          rounded="base">
             Download CV
           </Button>
-          <Button href="#projects" variant="outline" rounded="base">
+          <Button href="#work" variant="outline" rounded="base">
             My Work
           </Button>
         </div>
@@ -119,8 +123,8 @@ function About() {
 // -------- HomePage --------
 export default function HomePage() {
   return (
-    <section id="home" className="bg-[#17171a] text-white py-8">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="home" className=" text-white py-8">
+      <div id="about" className="max-w-6xl mx-auto px-6">
         <Hero />
         <About />
       </div>

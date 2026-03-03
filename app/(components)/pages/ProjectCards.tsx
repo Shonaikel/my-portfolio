@@ -29,7 +29,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="work" className="bg-[#17171a] text-white py-16">
+    <section id="work" className=" text-white py-16">
       <div className="max-w-6xl mx-auto px-6">
 
         <p className="text-gray-400 text-sm mb-2">My Projects</p>
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
           My Latest <span className="text-lime-400">Projects</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-7">
           {projects.map((project, i) => (
             <div
               key={i}
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
                           group-hover:opacity-40 group-hover:brightness-75
                             hover:!opacity-100 hover:!brightness-100
                             hover:border-lime-400
-                            hover:-translate-y-1
+                            hover:-translate-y-1.5
                             hover:shadow-lg"
             >
               {/* Imagen */}
