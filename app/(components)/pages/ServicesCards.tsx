@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { revealText, fadeIn, fadeContainer, fadeRight } from "../animations/animations";
 
 export default function ServicesSection() {
   const services = [
@@ -36,28 +38,49 @@ export default function ServicesSection() {
 
     {/* Header */}
         <div className="flex justify-between items-center mb-12">
-            <div>
+            {/* Texto */}
+          <motion.div
+            variants={revealText}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mb-10"
+          >
                 <p className="text-gray-400 text-sm">My services</p>
                 <h2 className="text-3xl font-bold">
                 Services <span className="text-lime-400">I Provide</span>
                 </h2>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-6">
-                <button className="bg-[#8ff51b] text-black px-6 py-2 rounded-full font-semibold">
-                    Hire me
-                </button>
-                <span className="w-16 h-[1px] bg-gray-600"></span>
-                <span className="text-gray-400 text-sm">Let's connect</span>
-            </div>
+            <motion.div
+                className="flex items-center gap-6 overflow-hidden"
+                variants={fadeRight}
+                initial="hidden"
+                animate="visible"
+            >
+              <button className="bg-[#8ff51b] text-black px-6 py-2 rounded-full font-semibold">
+                Hire me
+              </button>
+
+              <span className="w-16 border-b border-gray-600 block"></span>
+
+              <span className="text-gray-400 text-sm">
+                Let's connect
+              </span>
+            </motion.div>
         </div>
 
     {/* Grid */}
-        <div className="grid md:grid-cols-4 gap-4">
+      <motion.div className="grid md:grid-cols-4 gap-4"
+                    variants={fadeContainer}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+      >
           {services.map((service, index) => (
             <FlipCard key={index} service={service} />
           ))}
-        </div>
+      </motion.div>
 
       </div>
     </section>
@@ -70,9 +93,10 @@ function FlipCard({ service }: any) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div className="h-71 cursor-pointer transition-transform duration-300 hover:-translate-y-1.5"
-          style={{ perspective: "1000px" }} 
-          onClick={() => setFlipped(!flipped)}
+    <motion.div variants={fadeIn}
+                className="h-71 cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                style={{ perspective: "1000px" }}
+                onClick={() => setFlipped(!flipped)}
     >
       <div className="relative w-full h-full duration-500" style={{
           transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -98,7 +122,7 @@ function FlipCard({ service }: any) {
         </div>
 
         {/* BACK */}
-        <div className="absolute w-full h-full bg-lime-400 rounded-xl shadow-lg p-4 flex flex-col 
+        <div className="absolute w-full h-full bg-[#8ff51b] rounded-xl shadow-lg p-4 flex flex-col 
                         text-center items-center justify-center" 
             style={{
               backfaceVisibility: "hidden", 
@@ -109,6 +133,6 @@ function FlipCard({ service }: any) {
           <p className="text-black text-sm">{service.moreInfo} </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -11,12 +11,12 @@ import ContactSection from "./(components)/organisms/Footer";
 const HomePage = () => {
   return (
     <div className="bg-[#17171a] min-h-screen flex flex-col scroll-smooth">
+      
       <Header />
 
         <main className="max-w-4xl mx-auto px-6 w-full flex flex-col scroll-smooth"> 
           <HomeContent />   
         </main>
-
         <main className="w-full bg-[#242427] flex flex-col flex-1">
            <div className="max-w-4xl mx-auto px-6 w-full">
            <SkillsBar />

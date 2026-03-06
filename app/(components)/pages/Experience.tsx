@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealText, fadeLeft } from "../animations/animations";
+
 export default function ExperienceSection() {
   const experiences=[
     {
@@ -17,36 +22,67 @@ export default function ExperienceSection() {
   return (
     <section className=" px-6 text-white bg-[#242427]" >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16">Experience</h2>
+        <motion.div  variants={revealText}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold mb-16">Experience</h2>
+        </motion.div>
 
         <div className="relative">
 
           <div className="absolute left-[110px] top-0 h-full w-1 bg-white/20 rounded"></div>
 
           {experiences.map((exp, index) => (
-            <div key={index}
-                 className="grid grid-cols-[80px_40px_1fr] gap-6 mb-16 relative"
-            >   
-            {/* Year */}
-              <div className="text-sm text-gray-400 text-right pt-1">
-                {exp.year}
-              </div>
+            <div
+              key={index}
+              className="grid grid-cols-[80px_40px_1fr] gap-6 mb-16 relative"
+            >
 
-            {/* circles */}
-              <div className="flex justify-center">
-                <div className="absolute top-[5px] left-[105px] w-4 h-4 bg-lime-400 rounded-full 
-                                shadow-[0_0_12px_rgba(163,230,53,0.7)] ring-8 ring-[#242427]">
+              {/* Year + Circle */}
+              <motion.div
+                className="contents"
+                variants={fadeLeft}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+
+                {/* Year */}
+                <div className="text-sm text-gray-400 text-right pt-1">
+                  {exp.year}
                 </div>
-              </div>
 
-            {/* Content */}
-              <div>
-                <h3 className="text-xl font-semibold"> {exp.role} </h3>
-                <span className="block text-sm text-gray-400 mb-3"> {exp.company} </span>
-                <p className="text-gray-400 leading-relaxed max-w-xl"> {exp.description} </p>
-              </div>
+                {/* Circle */}
+                <div className="flex justify-center">
+                  <div
+                    className="absolute top-[5px] left-[105px] w-4 h-4 bg-lime-400 rounded-full 
+                    shadow-[0_0_12px_rgba(163,230,53,0.7)] ring-8 ring-[#242427]"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Content */}
+              <motion.div
+                variants={fadeLeft}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold">{exp.role}</h3>
+
+                <span className="block text-sm text-gray-400 mb-3">
+                  {exp.company}
+                </span>
+
+                <p className="text-gray-400 leading-relaxed max-w-xl">
+                  {exp.description}
+                </p>
+              </motion.div>
             </div>
           ))}
+
         </div>
       </div>
     </section>
