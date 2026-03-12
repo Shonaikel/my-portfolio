@@ -15,23 +15,23 @@ const projects = [
   {
     title: "Smart House Dashboard",
     img: "/images/project2.png",
-    tags: ["React", "API", "Mobile"],
+    tags: ["UI/UX", "Web Design"],
     meta: "Personal Project · Web App · 1 Month",
     url: "https://www.figma.com/design/ffuya41CN3QGGjFMky6uEe/PROYECTO-PAGINA-JUEGOS?node-id=0-1&p=f&t=06mPNyqZJqn9Pqml-0",
   },
   {
-    title: "Portfolio Website",
-    img: "/images/work1.png",
-    tags: ["UI/UX"],
-    meta: "Freelance · Website · 3 Weeks",
-    url: "https://tu-proyecto1.com",
+    title: "Sepia NoteBook",
+    img: "/images/work3.png",
+    tags: ["Vue", "Prisma", "JavaScript"],
+    meta: "Freelance · Website · 1 Week",
+    url: "https://github.com/Shonaikel/Sepia-NoteBlog",
   },
   {
-    title: "Portfolio Website",
-    img: "/images/work1.png",
-    tags: ["UI/UX"],
-    meta: "Freelance · Website · 3 Weeks",
-    url: "https://tu-proyecto1.com",
+    title: "ETK. Compute",
+    img: "/images/work4.png",
+    tags: ["Wordpress", "JavaScript", "Design"],
+    meta: "Internship · Website · 4 Weeks",
+    url: "https://drive.google.com/drive/u/0/folders/17QU3wECke-gce0b6Tt6O5n7sqaQ9ASS6",
   },
 ];
 
@@ -55,7 +55,6 @@ export default function ProjectsSection() {
           </h2>
         </motion.div>
 
-
         {/* Grid */}
         <motion.div
           variants={staggerCards}
@@ -65,53 +64,61 @@ export default function ProjectsSection() {
           className="grid grid-cols-2 gap-4 md:gap-7"
         >
           {projects.map((project, i) => (
-            <motion.div
+            <a
               key={i}
-              variants={fadeCard}
-              whileHover={{ y: -8, scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="bg-[#1f1f22] rounded-2xl overflow-hidden border border-transparent hover:border-lime-400"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
+              <motion.div
+                variants={fadeCard}
+                whileHover={{ y: -8, scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="bg-[#1f1f22] rounded-2xl overflow-hidden border border-transparent hover:border-lime-400 cursor-pointer"
+              >
 
-              <div className="h-40 md:h-64 overflow-hidden">
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
+                <div className="h-40 md:h-64 overflow-hidden">
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
 
-              <div className="p-4 md:p-6">
+                <div className="p-4 md:p-6">
 
-                <h3 className="font-bold mb-2 text-sm md:text-base leading-tight line-clamp-2">
-                  {project.title}
-                </h3>
+                  <h3 className="font-bold mb-2 text-sm md:text-base leading-tight line-clamp-2">
+                    {project.title}
+                  </h3>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="text-[11px] md:text-xs px-2 py-[2px] md:px-3 md:py-1 rounded-full bg-[#2c2c31] text-gray-400"
-                    >
-                      {tag}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="text-[11px] md:text-xs px-2 py-[2px] md:px-3 md:py-1 rounded-full bg-[#2c2c31] text-gray-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-between text-xs md:text-xs">
+                    <span className="text-gray-500">
+                      {project.meta}
                     </span>
-                  ))}
+
+                    <span className="text-lime-400 font-semibold hidden md:block">
+                      View More →
+                    </span>
+                  </div>
+
                 </div>
 
-                <div className="flex justify-between text-xs md:text-xs">
-                  <span className="text-gray-500">
-                    {project.meta}
-                  </span>
-
-                  <a href="#" className="text-lime-400 font-semibold hidden md:block">
-                    View More →
-                  </a>
-                </div>
-
-              </div>
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </motion.div>
 
@@ -119,4 +126,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
