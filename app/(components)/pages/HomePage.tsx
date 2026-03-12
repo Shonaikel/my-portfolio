@@ -54,7 +54,7 @@ function Hero() {
           Hello, I am
         </p>
 
-        <h1 className="text-4xl font-bold mb-3 h-[47px] flex items-center">
+        <h1 className="text-2xl md:text-4xl font-bold mb-3 h-[47px] flex items-center">
           Luis{" "}
           <span className="inline-flex items-center min-w-[220px] ml-3">
             {typedName}
@@ -98,7 +98,7 @@ function Hero() {
           alt="Luis Jonaikel Quesada"
           width={384}
           height={384}
-          className="w-72 md:w-96 relative"
+          className="hidden md:block w-72 md:w-96 relative"
           priority
         />
       </motion.div>
@@ -109,7 +109,7 @@ function Hero() {
 // -------- About Section --------
 function About() {
   return (
-    <div id="about" className="mt-20 grid md:grid-cols-2 gap-10 items-start">
+    <div id="about" className="mt-20 grid md:grid-cols-2 gap-4 md:gap-10 items-start">
       
       <motion.div variants={fadeUp}
                   initial="hidden"
@@ -119,7 +119,7 @@ function About() {
           <Image src="/images/workspace-aboutme.jpeg" alt="Espacio de trabajo"
             width={600}
             height={400}
-            className="rounded-2xl shadow-lg w-full h-auto"
+            className="rounded-xl md:rounded-2xl shadow-lg w-full md:h-auto h-[180px] object-cover"
           />
       </motion.div>
       
@@ -128,7 +128,7 @@ function About() {
                   animate="show"
                   transition={{ staggerChildren: 0.15 }}
       >
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Read About <span className="text-lime-400">My Life</span>
           </h2>
 

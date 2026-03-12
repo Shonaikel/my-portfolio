@@ -37,7 +37,7 @@ export default function SkillsBar() {
         {[...skills, ...skills].map((skill, i) => (
           <span
             key={i}
-            className="text-white/90 font-medium cursor-default
+            className="text-white/90 font-sx md:font-medium cursor-default
             transition-all duration-300 ease-out
             hover:text-lime-400
             hover:drop-shadow-[0_0_8px_rgba(163,230,53,0.6)]"

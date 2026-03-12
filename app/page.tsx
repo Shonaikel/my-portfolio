@@ -14,29 +14,39 @@ const HomePage = () => {
       
       <Header />
 
-        <main className="max-w-4xl mx-auto px-6 w-full flex flex-col scroll-smooth"> 
-          <HomeContent />   
-        </main>
-        <main className="w-full bg-[#242427] flex flex-col flex-1">
-           <div className="max-w-4xl mx-auto px-6 w-full">
-           <SkillsBar />
-           </div>
-        </main>
+      <main className="flex flex-col">
 
-        <main className="max-w-4xl mx-auto px-6 w-full flex flex-col flex-1">
+        {/* Home */}
+        <section className="max-w-4xl mx-auto md:px-6 w-full">
+          <HomeContent />
+        </section>
+
+        {/* Skills */}
+        <section className="w-full bg-[#242427]">
+          <div className="max-w-4xl mx-auto px-6">
+            <SkillsBar />
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section className="max-w-4xl mx-auto md:px-6 w-full">
           <ProjectsSection />
-        </main>
+        </section>
 
-        <main className="w-full bg-[#242427] flex flex-col flex-1">
-           <div className="max-w-4xl mx-auto px-6 w-full">
-              <Services />
-              <Myexperience />
-           </div>
-        </main>
-      
-        <main className="max-w-4xl mx-auto px-6 w-full flex flex-col flex-1">
+        {/* Services + Experience */}
+        <section className="w-full bg-[#242427]">
+          <div className="max-w-4xl mx-auto md:px-6">
+            <Services />
+            <Myexperience />
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section className="max-w-4xl mx-auto md:px-6 w-full">
           <ContactSection />
-        </main>
+        </section>
+
+      </main>
     </div>
   );
 }

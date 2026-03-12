@@ -27,22 +27,22 @@ export default function ExperienceSection() {
                       whileInView="show"
                       viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-16">Experience</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-7 md:mb-16">Experience</h2>
         </motion.div>
 
         <div className="relative">
 
-          <div className="absolute left-[110px] top-0 h-full w-1 bg-white/20 rounded"></div>
+          <div className="hidden md:block absolute left-[110px] top-0 h-full w-1 bg-white/20 rounded"></div>
 
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="grid grid-cols-[80px_40px_1fr] gap-6 mb-16 relative"
+              className="md:grid grid-cols-[80px_40px_1fr] gap-6 mb-16 relative"
             >
 
               {/* Year + Circle */}
               <motion.div
-                className="contents"
+                className="contents "
                 variants={fadeLeft}
                 initial="hidden"
                 whileInView="show"
@@ -50,12 +50,12 @@ export default function ExperienceSection() {
               >
 
                 {/* Year */}
-                <div className="text-sm text-gray-400 text-right pt-1">
+                <div className="text-sm text-gray-400 text-right pt-1 hidden md:block">
                   {exp.year}
                 </div>
 
                 {/* Circle */}
-                <div className="flex justify-center">
+                <div className=" justify-center hidden md:block">
                   <div
                     className="absolute top-[5px] left-[105px] w-4 h-4 bg-lime-400 rounded-full 
                     shadow-[0_0_12px_rgba(163,230,53,0.7)] ring-8 ring-[#242427]"
