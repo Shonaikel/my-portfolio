@@ -31,7 +31,6 @@ const projects = [
     img: "/images/work4.png",
     tags: ["Wordpress", "JavaScript", "Design"],
     meta: "Internship · Website · 4 Weeks",
-    url: "https://drive.google.com/drive/u/0/folders/17QU3wECke-gce0b6Tt6O5n7sqaQ9ASS6",
   },
 ];
 

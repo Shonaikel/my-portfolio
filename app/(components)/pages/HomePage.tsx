@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "../atoms/button";
 import { motion } from "framer-motion";
 import { fadeUp, fadeRight } from "../animations/animations";
+import { scrollToSection } from "../animations/scrollToSection";
 
 // -------- Typing Hook --------
 const useTyping = (text: string, speed: number = 140) => {
@@ -79,7 +80,9 @@ function Hero() {
             rounded="base">
               Download CV
             </Button>
-              <Button href="#work" variant="outline" rounded="base">
+              <Button onClick={() => scrollToSection("work")}
+                      variant="outline"
+                      rounded="base">
                 My Work
               </Button>
           </motion.div>

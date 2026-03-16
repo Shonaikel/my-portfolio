@@ -24,7 +24,7 @@ export default function ContactSection() {
         LET’S WORK <br /> TOGETHER
       </motion.h2>
 
-      <div className="relative max-w-4xl mx-auto flex justify-center">
+      <div id="contact" className="relative max-w-4xl mx-auto flex justify-center">
 
         {/* Card */}
         <motion.div

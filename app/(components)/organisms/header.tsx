@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Button } from "../atoms/button";
+import { scrollToSection } from "../animations/scrollToSection";
 
 export default function Header() {
 
@@ -12,13 +13,11 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const scrollToSection = (id: string) => {
+  const handleScroll = (id: string) => {
+
     setActiveSection(id);
 
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    scrollToSection(id);
 
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
@@ -51,19 +50,18 @@ export default function Header() {
 
       <div className="max-w-5xl mx-auto px-6 py-4">
 
-        {/* MAIN HEADER ROW */}
         <div className="flex items-center justify-between md:justify-center gap-10">
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-white text-2xl" onClick={() => setMenuOpen(!menuOpen)}
-          > ☰ </button>
+            className="md:hidden text-white text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
 
           {/* Logo */}
-          <a
-            href="/"
-            className="text-white text-xl md:text-2xl font-semibold"
-          >
+          <a href="/" className="text-white text-xl md:text-2xl font-semibold">
             Portfolio
           </a>
 
@@ -71,7 +69,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6">
 
             <a
-              onClick={() => scrollToSection("home")}
+              onClick={() => handleScroll("home")}
               className="relative text-white hover:text-lime-400 cursor-pointer"
             >
               Home
@@ -80,7 +78,7 @@ export default function Header() {
             </a>
 
             <a
-              onClick={() => scrollToSection("about")}
+              onClick={() => handleScroll("about")}
               className="relative text-white hover:text-lime-400 cursor-pointer"
             >
               About me
@@ -89,7 +87,7 @@ export default function Header() {
             </a>
 
             <a
-              onClick={() => scrollToSection("work")}
+              onClick={() => handleScroll("work")}
               className="relative text-white hover:text-lime-400 cursor-pointer"
             >
               Projects
@@ -98,7 +96,7 @@ export default function Header() {
             </a>
 
             <a
-              onClick={() => scrollToSection("services")}
+              onClick={() => handleScroll("services")}
               className="relative text-white hover:text-lime-400 cursor-pointer"
             >
               Services
@@ -142,7 +140,7 @@ export default function Header() {
             </div>
 
             <Button
-              href="https://wa.me/50688748560"
+              onClick={() => handleScroll("contact")}
               variant="primary"
               rounded="full-rounded"
             >
@@ -153,7 +151,7 @@ export default function Header() {
 
           {/* Contact mobile */}
           <Button
-            href="https://wa.me/50688748560"
+            onClick={() => handleScroll("contact")}
             variant="primary"
             rounded="full-rounded"
             className="md:hidden"
@@ -167,10 +165,10 @@ export default function Header() {
         {menuOpen && (
           <nav className="flex flex-col gap-5 mt-6 md:hidden">
 
-            <a onClick={() => scrollToSection("home")} className="text-white">Home</a>
-            <a onClick={() => scrollToSection("about")} className="text-white">About me</a>
-            <a onClick={() => scrollToSection("work")} className="text-white">Projects</a>
-            <a onClick={() => scrollToSection("services")} className="text-white">Services</a>
+            <a onClick={() => handleScroll("home")} className="text-white">Home</a>
+            <a onClick={() => handleScroll("about")} className="text-white">About me</a>
+            <a onClick={() => handleScroll("work")} className="text-white">Projects</a>
+            <a onClick={() => handleScroll("services")} className="text-white">Services</a>
 
           </nav>
         )}
