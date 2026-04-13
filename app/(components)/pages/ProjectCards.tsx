@@ -30,20 +30,20 @@ const projects = [
     title: "Sweet Home Mobile App",
     img: "/images/smarthome-work.jpg",
     tags: ["UI/UX", "Web Design"],
-    meta: "Designed by Jhonas · Mobile App · 10 Months",
+    meta: "Designed by Jhonas · Mobile App · 1 Months",
     url: "https://www.figma.com/community/file/1619522937555949168/smarthome-app?q_id=1cdbfa4d-df7c-4284-8013-16a29875f040",
   },
   {
     title: "ETK. Compute",
     img: "/images/work4.png",
     tags: ["Wordpress", "JavaScript", "Design"],
-    meta: "Internship · Website · 4 Weeks",
+    meta: "Internship · Website · 4 Months",
   },
   {
     title: "Arkam Games Design",
     img: "/images/project2.png",
     tags: ["UI/UX", "Web Design"],
-    meta: "Personal Project · Web App · 1 Month",
+    meta: "Personal Project · Web App · 2 Month",
     url: "https://www.figma.com/design/ffuya41CN3QGGjFMky6uEe/PROYECTO-PAGINA-JUEGOS?node-id=0-1&p=f&t=06mPNyqZJqn9Pqml-0",
   },
   
