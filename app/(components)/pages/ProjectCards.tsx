@@ -20,11 +20,11 @@ const projects = [
     url: "https://www.figma.com/design/ffuya41CN3QGGjFMky6uEe/PROYECTO-PAGINA-JUEGOS?node-id=0-1&p=f&t=06mPNyqZJqn9Pqml-0",
   },
   {
-    title: "Sepia NoteBook",
-    img: "/images/work3.png",
-    tags: ["Vue", "Prisma", "JavaScript"],
+    title: "Bunkr Burger Factory",
+    img: "/images/Bunkrwork.jpg",
+    tags: ["React", "Tailwind","TypeScript", "Claude", "Figma"],
     meta: "Freelance · Website · 1 Week",
-    url: "https://github.com/Shonaikel/Sepia-NoteBlog",
+    url: "https://github.com/Shonaikel/bunkr-bunger",
   },
   {
     title: "ETK. Compute",
@@ -32,6 +32,7 @@ const projects = [
     tags: ["Wordpress", "JavaScript", "Design"],
     meta: "Internship · Website · 4 Weeks",
   },
+  
 ];
 
 export default function ProjectsSection() {
