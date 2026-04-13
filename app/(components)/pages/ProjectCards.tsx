@@ -6,20 +6,6 @@ import { revealText, staggerCards, fadeCard } from "../animations/animations";
 
 const projects = [
   {
-    title: "Sweet Home Mobile App",
-    img: "/images/project1.png",
-    tags: ["UI/UX", "Web Design"],
-    meta: "Designed by Jhonas · Mobile App · 10 Months",
-    url: "https://www.figma.com/design/l8TncbQJ3HdJry2BMfWbXW/Smart-Homes-UX?node-id=0-1&p=f&t=G5T2OZXpxBbqW1Fg-0",
-  },
-  {
-    title: "Smart House Dashboard",
-    img: "/images/project2.png",
-    tags: ["UI/UX", "Web Design"],
-    meta: "Personal Project · Web App · 1 Month",
-    url: "https://www.figma.com/design/ffuya41CN3QGGjFMky6uEe/PROYECTO-PAGINA-JUEGOS?node-id=0-1&p=f&t=06mPNyqZJqn9Pqml-0",
-  },
-  {
     title: "Bunkr Burger Factory",
     img: "/images/Bunkrwork.jpg",
     tags: ["React", "Tailwind","TypeScript", "Claude", "Figma"],
@@ -27,10 +13,38 @@ const projects = [
     url: "https://github.com/Shonaikel/bunkr-bunger",
   },
   {
+    title: "Creative Portfolio [Photography]",
+    img: "/images/portfoliophoto-work.jpg",
+    tags: ["React", "Tailwind","TypeScript", "Claude", "Figma"],
+    meta: "Freelance · Website · 1 Week",
+    url: "https://www.figma.com/community/file/1623187402896439603/creative-portfolio-photography?q_id=8d402546-9c68-4b4e-a48f-1dea5cef9736",
+  },
+  {
+    title: "Website Yutravel",
+    img: "/images/travel-work.jpg",
+    tags: ["UI/UX", "Web Design"],
+    meta: "Designed by Jhonas · Website App · 3 days",
+    url: "https://www.figma.com/community/file/1619508980832959011/website-yutravel?q_id=7f9657ed-b598-486f-90b5-0260adfac360",
+  },
+  {
+    title: "Sweet Home Mobile App",
+    img: "/images/smarthome-work.jpg",
+    tags: ["UI/UX", "Web Design"],
+    meta: "Designed by Jhonas · Mobile App · 10 Months",
+    url: "https://www.figma.com/community/file/1619522937555949168/smarthome-app?q_id=1cdbfa4d-df7c-4284-8013-16a29875f040",
+  },
+  {
     title: "ETK. Compute",
     img: "/images/work4.png",
     tags: ["Wordpress", "JavaScript", "Design"],
     meta: "Internship · Website · 4 Weeks",
+  },
+  {
+    title: "Arkam Games Design",
+    img: "/images/project2.png",
+    tags: ["UI/UX", "Web Design"],
+    meta: "Personal Project · Web App · 1 Month",
+    url: "https://www.figma.com/design/ffuya41CN3QGGjFMky6uEe/PROYECTO-PAGINA-JUEGOS?node-id=0-1&p=f&t=06mPNyqZJqn9Pqml-0",
   },
   
 ];
