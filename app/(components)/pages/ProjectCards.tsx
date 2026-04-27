@@ -17,7 +17,7 @@ const projects = [
     img: "/images/portfoliophoto-work.jpg",
     tags: ["React", "Tailwind","TypeScript", "Claude", "Figma"],
     meta: "Freelance · Website · 1 Week",
-    url: "https://www.figma.com/community/file/1623187402896439603/creative-portfolio-photography?q_id=8d402546-9c68-4b4e-a48f-1dea5cef9736",
+    url: "https://jenrodga-photofolio.vercel.app/",
   },
   {
     title: "Website Yutravel",
