@@ -17,7 +17,7 @@ const projects = [
     img: "/images/portfoliophoto-work.jpg",
     tags: ["React", "Tailwind","TypeScript", "Claude", "Figma"],
     meta: "Freelance · Website · 1 Week",
-    url: "https://jenrodga-photofolio.vercel.app/",
+    url: "https://github.com/Shonaikel/jenrodga-photofolio",
   },
   {
     title: "Website Yutravel",
